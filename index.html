@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind Day 2</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        #back-to-top{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-700">
+    <!-- Navbar -->
+    <nav class="bg-white w-full fixed z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl"><img src="image/logo-png.png" alt="" class="size-[50px] rounded-2xl"></a>
+                <div class="block lg:hidden">
+                    <button id="mobile-menu-button" class="focus:outline-none">show</button>
+                </div>
+                <ul id="navbar" class="hidden lg:flex space-x-4">
+                    <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                    <li><a href="#work" class="hover:text-blue-600">Programs</a></li>
+                    <li><a href="#skill" class="hover:text-blue-600">Our Products</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600">Contact Us</a></li>
+                    <li><a href="login.html" class="hover:text-blue-600"><button class="bg-blue-700 hover:bg-blue-400 text-white rounded-md px-4 font-bold">LOGIN</button></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- mobile menu -->
+         <div id="mobile-menu" class="hidden lg:hidden">
+            <ul class="flex flex-col items-center bg-white py-4 space-y-4">
+                    <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                    <li><a href="client.html" class="hover:text-blue-600">Book Appointment</a></li>
+                    <li><a href="#skill" class="hover:text-blue-600">Skills</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+         </div>
+    </nav>
+    <!-- Hero section -->
+    <section class="bg-[url('https://images.unsplash.com/photo-1563213126-a4273aed2016?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fEJvcm5pYW4lMjBwaGFybWFjZXV0aWNhbHN8ZW58MHx8MHx8fDA%3D')] bg-cover bg-center text-white py-36">
+        <div class="container mx-auto text-center mt-16">
+            <h1 class="text-4xl md:text-6xl font-bold">Bornian Pharmaceuticals</h1>
+            <p class="mt-4 text-xl md:text-2xl">Health is a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity.</p>
+            <a href="" class="mt-6 inline-block bg-white text-blue-500 px-6 py-2 rounded-full hover:bg-gray-600">Show More</a>
+        </div>
+    </section>
+    
+     <!-- About section -->
+      <section id="about" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Bornian Pharmaceuticals</h2>
+                <p class="text-lg">
+                    Bornian pharmaceuticals is a large-scale pharmaceutical company, which client base is very large with over a hundred staff, but few specialized physicians.
+                    Clients are often required to book appointments to be attended to by a physician in their area of specialization, get a diagnose, and prescription given.
+                    Appointments are usually done physically, since many criteria has to be met before an appointment can be fully booked.
+                    But, most times due to their large number of clients, it is often a times difficult to attend to emergency cases without prior scheduled appointment, as physician may not be available to attend to the clients, or already booked by another client.
+                </p>
+            </div>
+      </section>
+
+      <!-- Work section -->
+       <section id="work" class="py-16">
+            
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Six Domains of Healthcare Quality</h2>
+                <div class="grid md:grid-cols lg:grid-cols-3 gap-8">
+                    <!-- work 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576765974930-2ebbfbd6dd20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZG9jdG9yJTIwcGF0aWVudHxlbnwwfHwwfHx8MA%3D%3D" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Safe</h3>
+                            <p class="text-gray-600"> Avoiding harm to patients from the care that is intended to help them.</p>
+                        </div>
+                    </div>
+                    <!-- work 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9jdG9yJTIwcGF0aWVudHxlbnwwfHwwfHx8MA%3D%3D" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Effective</h3>
+                            <p class="text-gray-600">Providing services based on scientific knowledge to all who could benefit and refraining from providing services to those not likely to benefit (avoiding underuse and misuse, respectively).</p>
+                        </div>
+                    </div>
+                    <!-- work 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576766125535-b04e15fd0273?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGRvY3RvciUyMHBhdGllbnR8ZW58MHx8MHx8fDA%3D" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Patient-centered</h3>
+                            <p class="text-gray-600">Providing care that is respectful of and responsive to individual patient preferences, needs, and values and ensuring that patient values guide all clinical decisions.</p>
+                        </div>
+                    </div>
+                    <!-- work 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1536064479547-7ee40b74b807?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWVkaWNhbCUyMHRyZWF0bWVudHxlbnwwfHwwfHx8MA%3D%3D" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Timely</h3>
+                            <p class="text-gray-600">Reducing waits and sometimes harmful delays for both those who receive and those who give care.</p>
+                        </div>
+                    </div>
+                    <!-- work 5 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1642977195677-e3533a97b9c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fGRvY3RvciUyMHBhdGllbnR8ZW58MHx8MHx8fDA%3D" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Efficient</h3>
+                            <p class="text-gray-600">Avoiding waste, including waste of equipment, supplies, ideas, and energy.</p>
+                        </div>
+                    </div>
+                    <!-- work 6 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633488781325-d36e6818d0c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGRvY3RvciUyMHBhdGllbnR8ZW58MHx8MHx8fDA%3D" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Equitable</h3>
+                            <p class="text-gray-600">Providing care that does not vary in quality because of personal characteristics such as gender, ethnicity, geographic location, and socioeconomic status.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+       </section>
+
+       <!-- Skills section -->
+       <section id="skill" class="py-16">
+            
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Medical Consumables</h2>
+            <div class="grid md:grid-cols lg:grid-cols-3 gap-8">
+                <!-- skill 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                       <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Anesthesia</h3>
+                        <p class="text-gray-600">Masks,
+                            Epidural Kits,
+                            Breathing Circuits,
+                            LMA’s,
+                            Hyperinflation Bag</p>
+                    </div>
+                </div>
+                <!-- skill 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Drainage/Irrigation</h3>
+                        <p class="text-gray-600">Irrigation Trays, 
+                            Suctioning Catheters,
+                            Yankauers,
+                            Wound Evacuators</p>
+                    </div>
+                </div>
+                <!-- skill 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">IVD (In-vitro Diagnostics) Procedures</h3>
+                        <p class="text-gray-600">Microtainers,
+                            IV Bags,
+                            Disposable sampling tube,
+                            96 Deep well plate,
+                            Electroporation cuvettes,
+                            Rapid antigen test</p>
+                    </div>
+                </div>
+                <!-- skill 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                   <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Common Surgery</h3>
+                        <p class="text-gray-600">Scalpel,
+                            Scissors,
+                            Forceps,
+                            Clamps,
+                            Needles & Suture, 
+                            Retractors, 
+                            Suction,
+                            Staplers and Clips,
+                            Energy Systems, 
+                            Laparoscopic Instruments</p>
+                    </div>
+                </div>
+                <!-- skill 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                   <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">General-Purpose Procedures</h3>
+                        <p class="text-gray-600">Bandages,
+                            Gauze,
+                            Syringes,
+                            Tape,
+                            Staples,
+                            Stethoscopes,
+                            Medical Scales,
+                            Surgical Blades,
+                            Surgical Tools,
+                            Tourniquets,
+                            Injection Needles,
+                            Medical laboratory supply</p>
+                    </div>
+                </div>
+                <!-- skill 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                         <h3 class="text-xl font-semibold mb-4"> Diabetic Procedures</h3>
+                         <p class="text-gray-600">Blood glucose meter,
+                            Blood sample test strip,
+                            Blood lancet,
+                            Blood syringe,
+                            Diabetic wearable device</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+        
+        </section>
+        
+
+        <!-- Contact section -->
+         <section id="contact" class="py-10">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl font-bold mb-6">Contact Us</h2>
+                <p class="text-lg mb-4">Send us a message</p>
+
+
+                <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <form action="#">
+                        <div class="mb-4">
+                            <label for="name" class="block text-left text-gray-700 font-semibold">Name</label>
+                            <input type="text" is="name" name="name" placeholder="Enter your name" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none
+                            focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-left text-gray-700 font-semibold">Email</label>
+                            <input type="email" is="email" name="email" placeholder="Enter your email address" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none
+                            focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-left text-gray-700 font-semibold">Subject</label>
+                            <input type="text" is="subject" name="subject" placeholder="Enter your subject matter here" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none
+                            focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-left text-gray-700 font-semibold">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none
+                            focus:ring-2 focus:ring-blue-600" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+                    </form>
+                </div>
+            </div>
+         </section>
+
+         <button id="back-to-top" class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-500">back</button>
+         <!-- footer section -->
+          <footer class="bg-gray-800 text-white py-6">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Bornian pharmaceuticals. All rights reserved.</p>
+            </div>
+          </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button')
+        const mobileMenue = document.getElementById('mobile-menu')
+        mobileMenuButton.addEventListener('click',()=>{
+            mobileMenue.classList.toggle('hidden')
+            
+        })
+
+        // back to top button
+        const backtotopbtn = document.getElementById('back-to-top')
+        window.addEventListener('scroll', ()=>{
+            if(window.scrollY > 500){
+                backtotopbtn.style.display = 'block'  
+            }else{
+                backtotopbtn.style.display = 'none' 
+            }
+        })
+        backtotopbtn.addEventListener('click', ()=>{
+            window.scrollTo({top:0, behavior:'smooth'})
+        })
+
+        const ul = document.getElementById('mobile-menu')
+        ul.addEventListener('click',()=>{
+            mobileMenue.classList.toggle('hidden')
+            
+        })
+       
+    </script>
+</body>
+
+</html>

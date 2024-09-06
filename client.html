@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmaceutical Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <a href="index.html" class="flex items-center justify-center absolute top-4 right-4"><button class="mt-4 bg-red-500 text-white py-2 px-4 rounded-full w-24">Logout</button></a>
+        
+    
+    
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Bornian Management System</h1>
+        
+        <!-- Client form for booking an appointment -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Book an Appointment</h2>
+            <form id="appointmentForm">
+                <div class="mb-4">
+                    <label for="clientName" class="block text-gray-700">Name</label>
+                    <input type="text" id="clientName" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="physician" class="block text-gray-700">Physician</label>
+                    <select id="physician" class="w-full p-2 border border-gray-300 rounded">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="appointmentDate" class="block text-gray-700">Date</label>
+                    <input type="date" id="appointmentDate" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="appointmentTime" class="block text-gray-700">Time</label>
+                    <input type="time" id="appointmentTime" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Book Appointment</button>
+            </form>
+        </div>
+
+        <!-- Diagnosis section -->
+        <div class="bg-white p-6 rounded-lg shadow-md mt-8">
+            <h2 class="text-2xl font-semibold mb-4">Emergency Diagnosis</h2>
+            <form id="diagnosisForm">
+                <div class="mb-4">
+                    <label for="symptoms" class="block text-gray-700">Symptoms</label>
+                    <input type="text" id="symptoms" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <button type="submit" class="w-full bg-red-500 text-white p-2 rounded">Get Diagnosis</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Modal for Receipt -->
+<div id="receiptModal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+    <div class="flex items-center justify-center min-h-screen px-4">
+    <div class="fixed inset-0 bg-gray-500 opacity-50"></div>
+      <div class="bg-white rounded-lg shadow-xl max-w-lg w-full p-6 z-10">
+        <h2 class="text-xl font-bold mb-4">Appointment Confirmation</h2>
+        <p id="receiptMessage"></p>
+        <div class="mt-6">
+          <button id="closeReceiptModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Modal for Prescription -->
+  <div id="diagnosisModal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+    <div class="fixed inset-0 bg-gray-500 opacity-50"></div>
+    <div class="flex items-center justify-center min-h-screen px-4">
+      <div class="bg-white rounded-lg shadow-xl max-w-lg w-full p-6 z-10">
+        <h2 class="text-xl font-bold mb-4">Diagnosis & Prescription</h2>
+        <p id="prescriptionMessage"></p>
+        <div class="mt-6">
+          <button id="closeDiagnosisModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+ 
+
+
+    <script src="client.js"></script>
+</body>
+</html>
